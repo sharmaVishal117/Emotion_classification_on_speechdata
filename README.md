@@ -2,13 +2,20 @@
 
 An intelligent Streamlit web application that analyzes audio files to detect emotional content using deep learning. The system can identify seven different emotions: Neutral, Calm, Happy, Sad, Angry, Fearful, and Disgust.
 
-## 🚀 Features
+## 🌐 Live Demo
+
+� **[Try the app on Streamlit Cloud](https://emotionclassificationonspeechdata-hwgfvwrm32azfm6pqydvjm.streamlit.app/)**
+
+*Note: The cloud version runs in demo mode due to audio library constraints. For full functionality, please run locally.*
+
+## �🚀 Features
 
 - **Real-time Emotion Detection**: Upload audio files and get instant emotion predictions
-- **Multiple Audio Formats**: Supports WAV, MP3, FLAC, and M4A files
+- **Multiple Audio Formats**: Supports WAV, MP3, FLAC, and M4A files (local version)
 - **Visual Analysis**: Interactive MFCC feature visualization and confidence scoring
 - **User-friendly Interface**: Clean, modern UI with detailed explanations
 - **High Accuracy**: Deep CNN model with SE-Blocks for robust emotion recognition
+- **Demo Mode**: Cloud deployment shows sample predictions without audio processing
 
 ## 🎯 Supported Emotions
 
@@ -24,7 +31,7 @@ An intelligent Streamlit web application that analyzes audio files to detect emo
 
 - **Frontend**: Streamlit
 - **ML Framework**: TensorFlow/Keras
-- **Audio Processing**: Librosa
+- **Audio Processing**: Librosa (local version)
 - **Feature Extraction**: MFCC (Mel-Frequency Cepstral Coefficients)
 - **Visualization**: Matplotlib, Seaborn
 
