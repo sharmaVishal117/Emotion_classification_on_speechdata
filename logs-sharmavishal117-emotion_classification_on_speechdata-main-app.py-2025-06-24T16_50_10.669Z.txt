@@ -1,17 +1,17 @@
 
-[     UTC     ] Logs for emotionclassificationonspeechdata-nmliwq5qh3vsfrra8fmbl6.streamlit.app/
+[     UTC     ] Logs for emotionclassificationonspeechdata-hwgfvwrm32azfm6pqydvjm.streamlit.app/
 ────────────────────────────────────────────────────────────────────────────────────────
-[16:44:05] 🖥 Provisioning machine...
-[16:44:05] 🎛 Preparing system...
-[16:44:05] ⛓ Spinning up manager process...
-[16:44:03] 🚀 Starting up repository: 'emotion_classification_on_speechdata', branch: 'main', main module: 'app.py'
-[16:44:03] 🐙 Cloning repository...
-[16:44:04] 🐙 Cloning into '/mount/src/emotion_classification_on_speechdata'...
+[16:49:08] 🖥 Provisioning machine...
+[16:49:08] 🎛 Preparing system...
+[16:49:08] ⛓ Spinning up manager process...
+[16:49:06] 🚀 Starting up repository: 'emotion_classification_on_speechdata', branch: 'main', main module: 'app.py'
+[16:49:06] 🐙 Cloning repository...
+[16:49:07] 🐙 Cloning into '/mount/src/emotion_classification_on_speechdata'...
 
-[16:44:04] 🐙 Cloned repository!
-[16:44:04] 🐙 Pulling code changes from Github...
-[16:44:04] 📦 Processing dependencies...
-[16:44:04] 📦 Apt dependencies were installed from /mount/src/emotion_classification_on_speechdata/packages.txt using apt-get.
+[16:49:07] 🐙 Cloned repository!
+[16:49:07] 🐙 Pulling code changes from Github...
+[16:49:08] 📦 Processing dependencies...
+[16:49:08] 📦 Apt dependencies were installed from /mount/src/emotion_classification_on_speechdata/packages.txt using apt-get.
 Hit:1 http://deb.debian.org/debian bullseye InRelease
 Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [27.2 kB]
 Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.0 kB]
@@ -19,11 +19,11 @@ Get:4 https://packages.microsoft.com/debian/11/prod bullseye InRelease [3650 B]
 Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [381 kB]
 Get:6 https://packages.microsoft.com/debian/11/prod bullseye/main amd64 Packages [198 kB]
 Get:7 https://packages.microsoft.com/debian/11/prod bullseye/main arm64 Packages [48.2 kB]
-Fetched 702 kB in 1s (1017 kB/s)
-Reading package lists...[2025-06-24 16:44:06.481701] 
-Reading package lists...[2025-06-24 16:44:07.096395] 
-Building dependency tree...[2025-06-24 16:44:07.265930] 
-Reading state information...[2025-06-24 16:44:07.266432] 
+Fetched 702 kB in 1s (1037 kB/s)
+Reading package lists...[2025-06-24 16:49:09.792530] 
+Reading package lists...[2025-06-24 16:49:10.329218] 
+Building dependency tree...[2025-06-24 16:49:10.530309] 
+Reading state information...[2025-06-24 16:49:10.530714] 
 The following additional packages will be installed:
   alsa-topology-conf alsa-ucm-conf fontconfig i965-va-driver
   intel-media-va-driver libaacs0 libaom0 libasound2 libasound2-data libass9
@@ -36,56 +36,14 @@ The following additional packages will be installed:
   libfribidi0 libgbm1 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
   libgdk-pixbuf2.0-common libgfortran5 libgl1 libgl1-mesa-dri libglapi-mesa
   libglvnd0 libglx-mesa0 libglx0 libgme0 libgraphite2-3 libgsm1 libharfbuzz0b
-  libiec61883-0 libigdgmm11 libjack-dev libjack0 liblapack3 liblilv-0-0
-  libllvm11 libmfx1 libmp3lame0 libmpg123-0 libmysofa1 libnorm1 libnuma1
-  libogg0 libopenal-data libopenal1 libopenjp2-7 libopenmpt0 libopus0
-  libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0
-  libpgm-5.3-0 libpixman-1-0 libpocketsphinx3 libportaudio2 libportaudiocpp0
-  libpostproc55 libpulse0 librabbitmq4 libraw1394-11 librsvg2-2
-  librsvg2-common librubberband2 libsamplerate0 libsdl2-2.0-0
-  libsensors-config libsensors5 libserd-0-0 libshine3 libslang2 libsnappy1v5
-  libsndio7.0 libsodium23 libsord-0-0 libsoxr0 libspeex1 libsphinxbase3
-  libsratom-0-0 libsrt1.4-gnutls libssh-gcrypt-4 libswresample3 libswscale5
-  libthai-data libthai0 libtheora0 libtwolame0 libudfread0 libusb-1.0-0
-  libva-drm2 libva-x11-2 libva2 libvdpau-va-gl1 libvdpau1 libvidstab1.1
-  libvorbis0a libvorbisenc2 libvorbisfile3 libvpx6 libvulkan1 libwavpack1
-  libwayland-client0 libwayland-cursor0 libwayland-egl1 libwayland-server0
-  libwebpmux3 libwrap0 libx11-xcb1 libx264-160 libx265-192 libxcb-dri2-0
-  libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0 libxcb-render0
-  libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0 libxcursor1
-  libxdamage1 libxfixes3 libxi6 libxinerama1 libxkbcommon0 libxrandr2
-  libxrender1 libxshmfence1 libxss1 libxv1 libxvidcore4 libxxf86vm1 libz3-4
-  libzmq5 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers
-  mesa-vulkan-drivers ocl-icd-libopencl1 pkg-config pocketsphinx-en-us
-  python3-lib2to3 uuid-dev va-driver-all vdpau-driver-all x11-common xkb-data
-Suggested packages:
-  ffmpeg-doc i965-va-driver-shaders libasound2-plugins alsa-utils
-  libasound2-doc libbluray-bdj libfftw3-bin libfftw3-dev jackd1 opus-tools
-  pciutils pulseaudio libraw1394-doc librsvg2-bin xdg-utils lm-sensors serdi
-  sndiod sordi speex opencl-icd portaudio19-doc nvidia-vdpau-driver
-  nvidia-tesla-440-vdpau-driver nvidia-tesla-418-vdpau-driver
-  nvidia-legacy-390xx-vdpau-driver nvidia-legacy-340xx-vdpau-driver
-The following NEW packages will be installed:
-  alsa-topology-conf alsa-ucm-conf ffmpeg fontconfig i965-va-driver
-  intel-media-va-driver libaacs0 libaom0 libasound2 libasound2-data
-  libasound2-dev libass9 libasyncns0 libavc1394-0 libavcodec58 libavdevice58
-  libavfilter7 libavformat58 libavresample4 libavutil56 libbdplus0 libblas3
-  libbluray2 libbs2b0 libcaca0 libcairo-gobject2 libcairo2 libcdio-cdda2
-  libcdio-paranoia2 libcdio19 libchromaprint1 libcodec2-0.9 libdatrie1
-  libdav1d4 libdc1394-25 libdrm-amdgpu1 libdrm-common libdrm-intel1
-  libdrm-nouveau2 libdrm-radeon1 libdrm2 libfftw3-double3 libflac8 libflite1
-  libfribidi0 libgbm1 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
-  libgdk-pixbuf2.0-common libgfortran5 libgl1 libgl1-mesa-dri libglapi-mesa
-  libglvnd0 libglx-mesa0 libglx0 libgme0 libgraphite2-3 libgsm1 libharfbuzz0b
-  libiec61883-0 libigdgmm11 libjack-dev libjack0 liblapack3 liblilv-0-0
-  libllvm11 libmfx1 libmp3lame0 libmpg123-0 libmysofa1 libnorm1 libnuma1
-  libogg0 libopenal-data libopenal1 libopenjp2-7 libopenmpt0 libopus0
-  libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0
-  libpgm-5.3-0 libpixman-1-0 libpocketsphinx3 libportaudio2 libportaudiocpp0
-  libpostproc55 libpulse0 librabbitmq4 libraw1394-11 librsvg2-2
-  librsvg2-common librubberband2 libsamplerate0 libsdl2-2.0-0
-  libsensors-config libsensors5 libserd-0-0 libshine3 libslang2 libsnappy1v5
-  libsndfile1 libsndio7.0 libsodium23 libsord-0-0 libsoxr0 libspeex1
+  libiec61883-0 libigdgmm11 libjack-jackd2-0 liblapack3 liblilv-0-0 libllvm11
+  libmfx1 libmp3lame0 libmpg123-0 libmysofa1 libnorm1 libnuma1 libogg0
+  libopenal-data libopenal1 libopenjp2-7 libopenmpt0 libopus0 libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpgm-5.3-0
+  libpixman-1-0 libpocketsphinx3 libpostproc55 libpulse0 librabbitmq4
+  libraw1394-11 librsvg2-2 librsvg2-common librubberband2 libsamplerate0
+  libsdl2-2.0-0 libsensors-config libsensors5 libserd-0-0 libshine3 libslang2
+  libsnappy1v5 libsndio7.0 libsodium23 libsord-0-0 libsoxr0 libspeex1
   libsphinxbase3 libsratom-0-0 libsrt1.4-gnutls libssh-gcrypt-4 libswresample3
   libswscale5 libthai-data libthai0 libtheora0 libtwolame0 libudfread0
   libusb-1.0-0 libva-drm2 libva-x11-2 libva2 libvdpau-va-gl1 libvdpau1
@@ -97,12 +55,51 @@ The following NEW packages will be installed:
   libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxkbcommon0
   libxrandr2 libxrender1 libxshmfence1 libxss1 libxv1 libxvidcore4 libxxf86vm1
   libz3-4 libzmq5 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers
-  mesa-vulkan-drivers ocl-icd-libopencl1 pkg-config pocketsphinx-en-us
-  portaudio19-dev python3-distutils python3-lib2to3 uuid-dev va-driver-all
+  mesa-vulkan-drivers ocl-icd-libopencl1 pocketsphinx-en-us va-driver-all
   vdpau-driver-all x11-common xkb-data
-0 upgraded, 183 newly installed, 0 to remove and 1 not upgraded.
-Need to get 135 MB of archives.
-After this operation, 435 MB of additional disk space will be used.
+Suggested packages:
+  ffmpeg-doc i965-va-driver-shaders libasound2-plugins alsa-utils
+  libbluray-bdj libfftw3-bin libfftw3-dev jackd2 libportaudio2 opus-tools
+  pciutils pulseaudio libraw1394-doc librsvg2-bin xdg-utils lm-sensors serdi
+  sndiod sordi speex opencl-icd nvidia-vdpau-driver
+  nvidia-tesla-440-vdpau-driver nvidia-tesla-418-vdpau-driver
+  nvidia-legacy-390xx-vdpau-driver nvidia-legacy-340xx-vdpau-driver
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf ffmpeg fontconfig i965-va-driver
+  intel-media-va-driver libaacs0 libaom0 libasound2 libasound2-data libass9
+  libasyncns0 libavc1394-0 libavcodec58 libavdevice58 libavfilter7
+  libavformat58 libavresample4 libavutil56 libbdplus0 libblas3 libbluray2
+  libbs2b0 libcaca0 libcairo-gobject2 libcairo2 libcdio-cdda2
+  libcdio-paranoia2 libcdio19 libchromaprint1 libcodec2-0.9 libdatrie1
+  libdav1d4 libdc1394-25 libdrm-amdgpu1 libdrm-common libdrm-intel1
+  libdrm-nouveau2 libdrm-radeon1 libdrm2 libfftw3-double3 libflac8 libflite1
+  libfribidi0 libgbm1 libgdk-pixbuf-2.0-0 libgdk-pixbuf2.0-bin
+  libgdk-pixbuf2.0-common libgfortran5 libgl1 libgl1-mesa-dri libglapi-mesa
+  libglvnd0 libglx-mesa0 libglx0 libgme0 libgraphite2-3 libgsm1 libharfbuzz0b
+  libiec61883-0 libigdgmm11 libjack-jackd2-0 liblapack3 liblilv-0-0 libllvm11
+  libmfx1 libmp3lame0 libmpg123-0 libmysofa1 libnorm1 libnuma1 libogg0
+  libopenal-data libopenal1 libopenjp2-7 libopenmpt0 libopus0 libpango-1.0-0
+  libpangocairo-1.0-0 libpangoft2-1.0-0 libpciaccess0 libpgm-5.3-0
+  libpixman-1-0 libpocketsphinx3 libpostproc55 libpulse0 librabbitmq4
+  libraw1394-11 librsvg2-2 librsvg2-common librubberband2 libsamplerate0
+  libsdl2-2.0-0 libsensors-config libsensors5 libserd-0-0 libshine3 libslang2
+  libsnappy1v5 libsndfile1 libsndio7.0 libsodium23 libsord-0-0 libsoxr0
+  libspeex1 libsphinxbase3 libsratom-0-0 libsrt1.4-gnutls libssh-gcrypt-4
+  libswresample3 libswscale5 libthai-data libthai0 libtheora0 libtwolame0
+  libudfread0 libusb-1.0-0 libva-drm2 libva-x11-2 libva2 libvdpau-va-gl1
+  libvdpau1 libvidstab1.1 libvorbis0a libvorbisenc2 libvorbisfile3 libvpx6
+  libvulkan1 libwavpack1 libwayland-client0 libwayland-cursor0 libwayland-egl1
+  libwayland-server0 libwebpmux3 libwrap0 libx11-xcb1 libx264-160 libx265-192
+  libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-randr0
+  libxcb-render0 libxcb-shape0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0
+  libxcursor1 libxdamage1 libxfixes3 libxi6 libxinerama1 libxkbcommon0
+  libxrandr2 libxrender1 libxshmfence1 libxss1 libxv1 libxvidcore4 libxxf86vm1
+  libz3-4 libzmq5 libzvbi-common libzvbi0 mesa-va-drivers mesa-vdpau-drivers
+  mesa-vulkan-drivers ocl-icd-libopencl1 pocketsphinx-en-us va-driver-all
+  vdpau-driver-all x11-common xkb-data
+0 upgraded, 174 newly installed, 0 to remove and 1 not upgraded.
+Need to get 134 MB of archives.
+After this operation, 430 MB of additional disk space will be used.
 Get:1 http://deb.debian.org/debian bullseye/main amd64 alsa-topology-conf all 1.2.4-1 [12.8 kB]
 Get:2 http://deb.debian.org/debian bullseye/main amd64 libasound2-data all 1.2.4-1.1 [38.2 kB]
 Get:3 http://deb.debian.org/debian bullseye/main amd64 libasound2 amd64 1.2.4-1.1 [356 kB]
@@ -239,7 +236,7 @@ Get:133 http://deb.debian.org/debian bullseye/main amd64 libglx-mesa0 amd64 20.3
 Get:134 http://deb.debian.org/debian bullseye/main amd64 libglx0 amd64 1.3.2-1 [35.7 kB]
 Get:135 http://deb.debian.org/debian bullseye/main amd64 libgl1 amd64 1.3.2-1 [89.5 kB]
 Get:136 http://deb.debian.org/debian bullseye/main amd64 libiec61883-0 amd64 1.2.0-4 [31.4 kB]
-Get:137 http://deb.debian.org/debian bullseye/main amd64 libjack0 amd64 1:0.125.0-3+b1 [107 kB]
+Get:137 http://deb.debian.org/debian bullseye/main amd64 libjack-jackd2-0 amd64 1.9.17~dfsg-1 [289 kB]
 Get:138 http://deb.debian.org/debian bullseye/main amd64 libopenal-data all 1:1.19.1-2 [170 kB]
 Get:139 http://deb.debian.org/debian bullseye/main amd64 libsndio7.0 amd64 1.5.0-3 [24.7 kB]
 Get:140 http://deb.debian.org/debian bullseye/main amd64 libopenal1 amd64 1:1.19.1-2 [501 kB]
@@ -266,30 +263,21 @@ Get:160 http://deb.debian.org/debian bullseye/main amd64 i965-va-driver amd64 2.
 Get:161 http://deb.debian.org/debian bullseye/main amd64 libigdgmm11 amd64 20.4.1+ds1-1 [112 kB]
 Get:162 http://deb.debian.org/debian bullseye/main amd64 intel-media-va-driver amd64 21.1.1+dfsg1-1 [1915 kB]
 Get:163 http://deb.debian.org/debian bullseye/main amd64 libaacs0 amd64 0.9.0-2 [52.4 kB]
-Get:164 http://deb.debian.org/debian bullseye/main amd64 libasound2-dev amd64 1.2.4-1.1 [126 kB]
-Get:165 http://deb.debian.org/debian bullseye/main amd64 libbdplus0 amd64 0.1.2-3 [47.5 kB]
-Get:166 http://deb.debian.org/debian-security bullseye-security/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.2+dfsg-1+deb11u3 [25.9 kB]
-Get:167 http://deb.debian.org/debian bullseye/main amd64 pkg-config amd64 0.29.2-1 [65.1 kB]
-Get:168 http://deb.debian.org/debian bullseye/main amd64 uuid-dev amd64 2.36.1-8+deb11u2 [99.4 kB]
-Get:169 http://deb.debian.org/debian bullseye/main amd64 libjack-dev amd64 1:0.125.0-3+b1 [225 kB]
-Get:170 http://deb.debian.org/debian bullseye/main amd64 libportaudio2 amd64 19.6.0-1.1 [66.7 kB]
-Get:171 http://deb.debian.org/debian bullseye/main amd64 libportaudiocpp0 amd64 19.6.0-1.1 [20.0 kB]
-Get:172 http://deb.debian.org/debian bullseye/main amd64 librsvg2-common amd64 2.50.3+dfsg-1+deb11u1 [31.2 kB]
-Get:173 http://deb.debian.org/debian bullseye/main amd64 libvdpau-va-gl1 amd64 0.4.2-1+b1 [71.3 kB]
-Get:174 http://deb.debian.org/debian bullseye/main amd64 libxcb-randr0 amd64 1.14-3 [113 kB]
-Get:175 http://deb.debian.org/debian bullseye/main amd64 mesa-va-drivers amd64 20.3.5-1 [2623 kB]
-Get:176 http://deb.debian.org/debian bullseye/main amd64 mesa-vdpau-drivers amd64 20.3.5-1 [2744 kB]
-Get:177 http://deb.debian.org/debian bullseye/main amd64 mesa-vulkan-drivers amd64 20.3.5-1 [4086 kB]
-Get:178 http://deb.debian.org/debian bullseye/main amd64 pocketsphinx-en-us all 0.8+5prealpha+1-13 [24.3 MB]
-Get:179 http://deb.debian.org/debian bullseye/main amd64 portaudio19-dev amd64 19.6.0-1.1 [109 kB]
-Get:180 http://deb.debian.org/debian bullseye/main amd64 python3-lib2to3 all 3.9.2-1 [77.8 kB]
-Get:181 http://deb.debian.org/debian bullseye/main amd64 python3-distutils all 3.9.2-1 [143 kB]
-Get:182 http://deb.debian.org/debian bullseye/main amd64 va-driver-all amd64 2.10.0-1 [15.3 kB]
-Get:183 http://deb.debian.org/debian bullseye/main amd64 vdpau-driver-all amd64 1.4-3 [8540 B]
+Get:164 http://deb.debian.org/debian bullseye/main amd64 libbdplus0 amd64 0.1.2-3 [47.5 kB]
+Get:165 http://deb.debian.org/debian-security bullseye-security/main amd64 libgdk-pixbuf2.0-bin amd64 2.42.2+dfsg-1+deb11u3 [25.9 kB]
+Get:166 http://deb.debian.org/debian bullseye/main amd64 librsvg2-common amd64 2.50.3+dfsg-1+deb11u1 [31.2 kB]
+Get:167 http://deb.debian.org/debian bullseye/main amd64 libvdpau-va-gl1 amd64 0.4.2-1+b1 [71.3 kB]
+Get:168 http://deb.debian.org/debian bullseye/main amd64 libxcb-randr0 amd64 1.14-3 [113 kB]
+Get:169 http://deb.debian.org/debian bullseye/main amd64 mesa-va-drivers amd64 20.3.5-1 [2623 kB]
+Get:170 http://deb.debian.org/debian bullseye/main amd64 mesa-vdpau-drivers amd64 20.3.5-1 [2744 kB]
+Get:171 http://deb.debian.org/debian bullseye/main amd64 mesa-vulkan-drivers amd64 20.3.5-1 [4086 kB]
+Get:172 http://deb.debian.org/debian bullseye/main amd64 pocketsphinx-en-us all 0.8+5prealpha+1-13 [24.3 MB]
+Get:173 http://deb.debian.org/debian bullseye/main amd64 va-driver-all amd64 2.10.0-1 [15.3 kB]
+Get:174 http://deb.debian.org/debian bullseye/main amd64 vdpau-driver-all amd64 1.4-3 [8540 B]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 135 MB in 2s (74.8 MB/s)
+Fetched 134 MB in 2s (88.5 MB/s)
 Selecting previously unselected package alsa-topology-conf.
-(Reading database ... [2025-06-24 16:44:10.545361] (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%[2025-06-24 16:44:10.546451] (Reading database ... 65%[2025-06-24 16:44:10.551473] (Reading database ... 70%[2025-06-24 16:44:10.553336] (Reading database ... 75%[2025-06-24 16:44:10.555149] (Reading database ... 80%[2025-06-24 16:44:10.557483] (Reading database ... 85%[2025-06-24 16:44:10.559976] (Reading database ... 90%[2025-06-24 16:44:10.563208] (Reading database ... 95%[2025-06-24 16:44:10.565599] (Reading database ... 100%(Reading database ... 22039 files and directories currently installed.)
+(Reading database ... [2025-06-24 16:49:13.322703] (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%[2025-06-24 16:49:13.324948] (Reading database ... 65%[2025-06-24 16:49:13.343545] (Reading database ... 70%[2025-06-24 16:49:13.353586] (Reading database ... 75%[2025-06-24 16:49:13.354458] (Reading database ... 80%[2025-06-24 16:49:13.362205] (Reading database ... 85%[2025-06-24 16:49:13.379232] (Reading database ... 90%[2025-06-24 16:49:13.397485] (Reading database ... 95%[2025-06-24 16:49:13.408877] (Reading database ... 100%(Reading database ... 22039 files and directories currently installed.)
 Preparing to unpack .../000-alsa-topology-conf_1.2.4-1_all.deb ...
 Unpacking alsa-topology-conf (1.2.4-1) ...
 Selecting previously unselected package libasound2-data.
@@ -697,9 +685,9 @@ Unpacking libgl1:amd64 (1.3.2-1) ...
 Selecting previously unselected package libiec61883-0:amd64.
 Preparing to unpack .../135-libiec61883-0_1.2.0-4_amd64.deb ...
 Unpacking libiec61883-0:amd64 (1.2.0-4) ...
-Selecting previously unselected package libjack0:amd64.
-Preparing to unpack .../136-libjack0_1%3a0.125.0-3+b1_amd64.deb ...
-Unpacking libjack0:amd64 (1:0.125.0-3+b1) ...
+Selecting previously unselected package libjack-jackd2-0:amd64.
+Preparing to unpack .../136-libjack-jackd2-0_1.9.17~dfsg-1_amd64.deb ...
+Unpacking libjack-jackd2-0:amd64 (1.9.17~dfsg-1) ...
 Selecting previously unselected package libopenal-data.
 Preparing to unpack .../137-libopenal-data_1%3a1.19.1-2_all.deb ...
 Unpacking libopenal-data (1:1.19.1-2) ...
@@ -778,65 +766,38 @@ Unpacking intel-media-va-driver:amd64 (21.1.1+dfsg1-1) ...
 Selecting previously unselected package libaacs0:amd64.
 Preparing to unpack .../162-libaacs0_0.9.0-2_amd64.deb ...
 Unpacking libaacs0:amd64 (0.9.0-2) ...
-Selecting previously unselected package libasound2-dev:amd64.
-Preparing to unpack .../163-libasound2-dev_1.2.4-1.1_amd64.deb ...
-Unpacking libasound2-dev:amd64 (1.2.4-1.1) ...
 Selecting previously unselected package libbdplus0:amd64.
-Preparing to unpack .../164-libbdplus0_0.1.2-3_amd64.deb ...
+Preparing to unpack .../163-libbdplus0_0.1.2-3_amd64.deb ...
 Unpacking libbdplus0:amd64 (0.1.2-3) ...
 Selecting previously unselected package libgdk-pixbuf2.0-bin.
-Preparing to unpack .../165-libgdk-pixbuf2.0-bin_2.42.2+dfsg-1+deb11u3_amd64.deb ...
+Preparing to unpack .../164-libgdk-pixbuf2.0-bin_2.42.2+dfsg-1+deb11u3_amd64.deb ...
 Unpacking libgdk-pixbuf2.0-bin (2.42.2+dfsg-1+deb11u3) ...
-Selecting previously unselected package pkg-config.
-Preparing to unpack .../166-pkg-config_0.29.2-1_amd64.deb ...
-Unpacking pkg-config (0.29.2-1) ...
-Selecting previously unselected package uuid-dev:amd64.
-Preparing to unpack .../167-uuid-dev_2.36.1-8+deb11u2_amd64.deb ...
-Unpacking uuid-dev:amd64 (2.36.1-8+deb11u2) ...
-Selecting previously unselected package libjack-dev.
-Preparing to unpack .../168-libjack-dev_1%3a0.125.0-3+b1_amd64.deb ...
-Unpacking libjack-dev (1:0.125.0-3+b1) ...
-Selecting previously unselected package libportaudio2:amd64.
-Preparing to unpack .../169-libportaudio2_19.6.0-1.1_amd64.deb ...
-Unpacking libportaudio2:amd64 (19.6.0-1.1) ...
-Selecting previously unselected package libportaudiocpp0:amd64.
-Preparing to unpack .../170-libportaudiocpp0_19.6.0-1.1_amd64.deb ...
-Unpacking libportaudiocpp0:amd64 (19.6.0-1.1) ...
 Selecting previously unselected package librsvg2-common:amd64.
-Preparing to unpack .../171-librsvg2-common_2.50.3+dfsg-1+deb11u1_amd64.deb ...
+Preparing to unpack .../165-librsvg2-common_2.50.3+dfsg-1+deb11u1_amd64.deb ...
 Unpacking librsvg2-common:amd64 (2.50.3+dfsg-1+deb11u1) ...
 Selecting previously unselected package libvdpau-va-gl1:amd64.
-Preparing to unpack .../172-libvdpau-va-gl1_0.4.2-1+b1_amd64.deb ...
+Preparing to unpack .../166-libvdpau-va-gl1_0.4.2-1+b1_amd64.deb ...
 Unpacking libvdpau-va-gl1:amd64 (0.4.2-1+b1) ...
 Selecting previously unselected package libxcb-randr0:amd64.
-Preparing to unpack .../173-libxcb-randr0_1.14-3_amd64.deb ...
+Preparing to unpack .../167-libxcb-randr0_1.14-3_amd64.deb ...
 Unpacking libxcb-randr0:amd64 (1.14-3) ...
 Selecting previously unselected package mesa-va-drivers:amd64.
-Preparing to unpack .../174-mesa-va-drivers_20.3.5-1_amd64.deb ...
+Preparing to unpack .../168-mesa-va-drivers_20.3.5-1_amd64.deb ...
 Unpacking mesa-va-drivers:amd64 (20.3.5-1) ...
 Selecting previously unselected package mesa-vdpau-drivers:amd64.
-Preparing to unpack .../175-mesa-vdpau-drivers_20.3.5-1_amd64.deb ...
+Preparing to unpack .../169-mesa-vdpau-drivers_20.3.5-1_amd64.deb ...
 Unpacking mesa-vdpau-drivers:amd64 (20.3.5-1) ...
 Selecting previously unselected package mesa-vulkan-drivers:amd64.
-Preparing to unpack .../176-mesa-vulkan-drivers_20.3.5-1_amd64.deb ...
+Preparing to unpack .../170-mesa-vulkan-drivers_20.3.5-1_amd64.deb ...
 Unpacking mesa-vulkan-drivers:amd64 (20.3.5-1) ...
 Selecting previously unselected package pocketsphinx-en-us.
-Preparing to unpack .../177-pocketsphinx-en-us_0.8+5prealpha+1-13_all.deb ...
+Preparing to unpack .../171-pocketsphinx-en-us_0.8+5prealpha+1-13_all.deb ...
 Unpacking pocketsphinx-en-us (0.8+5prealpha+1-13) ...
-Selecting previously unselected package portaudio19-dev:amd64.
-Preparing to unpack .../178-portaudio19-dev_19.6.0-1.1_amd64.deb ...
-Unpacking portaudio19-dev:amd64 (19.6.0-1.1) ...
-Selecting previously unselected package python3-lib2to3.
-Preparing to unpack .../179-python3-lib2to3_3.9.2-1_all.deb ...
-Unpacking python3-lib2to3 (3.9.2-1) ...
-Selecting previously unselected package python3-distutils.
-Preparing to unpack .../180-python3-distutils_3.9.2-1_all.deb ...
-Unpacking python3-distutils (3.9.2-1) ...
 Selecting previously unselected package va-driver-all:amd64.
-Preparing to unpack .../181-va-driver-all_2.10.0-1_amd64.deb ...
+Preparing to unpack .../172-va-driver-all_2.10.0-1_amd64.deb ...
 Unpacking va-driver-all:amd64 (2.10.0-1) ...
 Selecting previously unselected package vdpau-driver-all:amd64.
-Preparing to unpack .../182-vdpau-driver-all_1.4-3_amd64.deb ...
+Preparing to unpack .../173-vdpau-driver-all_1.4-3_amd64.deb ...
 Unpacking vdpau-driver-all:amd64 (1.4-3) ...
 Setting up libgme0:amd64 (0.6.3-2) ...
 Setting up libssh-gcrypt-4:amd64 (0.9.8-0+deb11u1) ...
@@ -849,7 +810,7 @@ Setting up libwayland-server0:amd64 (1.18.0-2~exp1.1) ...
 Setting up libx11-xcb1:amd64 (2:1.7.2-1+deb11u2) ...
 Setting up libpciaccess0:amd64 (0.16-1) ...
 Setting up fontconfig (2.13.1-4.2) ...
-Regenerating fonts cache... [2025-06-24 16:44:32.792013] done.
+Regenerating fonts cache... [2025-06-24 16:49:35.261548] done.
 Setting up librabbitmq4:amd64 (0.10.0-1+deb11u1) ...
 Setting up libraw1394-11:amd64 (2.1.2-2) ...
 Setting up libsodium23:amd64 (1.0.18-1) ...
@@ -902,8 +863,6 @@ Setting up libwrap0:amd64 (7.6.q-31) ...
 Setting up libigdgmm11:amd64 (20.4.1+ds1-1) ...
 Setting up libxfixes3:amd64 (1:5.0.3-2) ...
 Setting up libxcb-sync1:amd64 (1.14-3) ...
-Setting up libjack0:amd64 (1:0.125.0-3+b1) ...
-Setting up uuid-dev:amd64 (2.36.1-8+deb11u2) ...
 Setting up libcodec2-0.9:amd64 (0.9.2-4) ...
 Setting up libfribidi0:amd64 (1.0.8-2+deb11u1) ...
 Setting up libopus0:amd64 (1.3.1-0.1) ...
@@ -912,7 +871,6 @@ Setting up intel-media-va-driver:amd64 (21.1.1+dfsg1-1) ...
 Setting up libxv1:amd64 (2:1.0.11-1) ...
 Setting up libvorbis0a:amd64 (1.3.7-1) ...
 Setting up libxrandr2:amd64 (2:1.5.1-1) ...
-Setting up pkg-config (0.29.2-1) ...
 Setting up libsensors5:amd64 (1:3.6.0-7) ...
 Setting up libaacs0:amd64 (0.9.0-2) ...
 Setting up pocketsphinx-en-us (0.8+5prealpha+1-13) ...
@@ -945,13 +903,10 @@ Setting up libcairo-gobject2:amd64 (1.16.0-5) ...
 Setting up libwayland-egl1:amd64 (1.18.0-2~exp1.1) ...
 Setting up libxss1:amd64 (1:1.2.3-1) ...
 Setting up libusb-1.0-0:amd64 (2:1.0.24-3) ...
-Setting up libjack-dev (1:0.125.0-3+b1) ...
 Setting up libmfx1:amd64 (21.1.0-1) ...
-Setting up libasound2-dev:amd64 (1.2.4-1.1) ...
 Setting up libbluray2:amd64 (1:1.2.1-4+deb11u2) ...
 Setting up libsamplerate0:amd64 (0.2.1+ds0-1) ...
 Setting up libwebpmux3:amd64 (0.6.1-2.1+deb11u2) ...
-Setting up python3-lib2to3 (3.9.2-1) ...
 Setting up libdrm-common (2.4.104-1) ...
 Setting up libzvbi-common (0.2.35-18) ...
 Setting up libmp3lame0:amd64 (3.100-3) ...
@@ -960,10 +915,8 @@ Setting up libiec61883-0:amd64 (1.2.0-4) ...
 Setting up libserd-0-0:amd64 (0.30.10-2) ...
 Setting up libxkbcommon0:amd64 (1.0.3-2) ...
 Setting up libwayland-client0:amd64 (1.18.0-2~exp1.1) ...
-Setting up python3-distutils (3.9.2-1) ...
 Setting up libavc1394-0:amd64 (0.5.4-5) ...
 Setting up libzvbi0:amd64 (0.2.35-18) ...
-Setting up libportaudio2:amd64 (19.6.0-1.1) ...
 Setting up liblapack3:amd64 (3.9.0-3+deb11u1) ...
 update-alternatives: using /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
 Setting up libzmq5:amd64 (4.3.4-1+deb11u1) ...
@@ -973,14 +926,13 @@ Setting up libcdio-cdda2:amd64 (10.2+2.0.0-1+b2) ...
 Setting up libcdio-paranoia2:amd64 (10.2+2.0.0-1+b2) ...
 Setting up libxcursor1:amd64 (1:1.2.0-2) ...
 Setting up libx265-192:amd64 (3.4-2) ...
-Setting up libportaudiocpp0:amd64 (19.6.0-1.1) ...
-Setting up portaudio19-dev:amd64 (19.6.0-1.1) ...
 Setting up libthai0:amd64 (0.1.28-3) ...
 Setting up libvorbisfile3:amd64 (1.3.7-1) ...
 Setting up libass9:amd64 (1:0.15.0-2) ...
 Setting up libdc1394-25:amd64 (2.2.6-3) ...
 Setting up librubberband2:amd64 (1.9.0-1) ...
 Setting up libsndio7.0:amd64 (1.5.0-3) ...
+Setting up libjack-jackd2-0:amd64 (1.9.17~dfsg-1) ...
 Setting up libdrm2:amd64 (2.4.104-1) ...
 Setting up libflite1:amd64 (2.2-2) ...
 Setting up libva-drm2:amd64 (2.10.0-1) ...
@@ -1046,12 +998,12 @@ Checking if Streamlit is installed
 Installing rich for an improved exception logging
 Using uv pip install.
 Using Python 3.9.23 environment at /home/adminuser/venv
-Resolved 5 packages in 109ms
-Prepared 5 packages in 388ms
-Installed 5 packages in 14ms
- + markdown-it-py[2025-06-24 16:44:37.579861] ==3.0.0
+Resolved 5 packages in 94ms
+Prepared 5 packages in 98ms
+Installed 5 packages in 17ms
+ + markdown-it-py==3.0.0
  + mdurl==0.1.2
- + pygments==2.19.2
+ + pygments==[2025-06-24 16:49:40.088032] 2.19.2
  + rich==14.0.0
  + typing-extensions==4.14.0
 
@@ -1079,8 +1031,6 @@ Collecting pandas==1.5.3 (from -r /mount/src/emotion_classification_on_speechdat
   Downloading pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
 Collecting soundfile (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 9))
   Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl.metadata (16 kB)
-Collecting h5py==3.7.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 10))
-  Downloading h5py-3.7.0-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (1.8 kB)
 Collecting altair<6,>=4.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
   Downloading altair-5.5.0-py3-none-any.whl.metadata (11 kB)
 Collecting blinker<2,>=1.0.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
@@ -1123,12 +1073,12 @@ Collecting tornado<7,>=6.0.3 (from streamlit==1.28.0->-r /mount/src/emotion_clas
   Downloading tornado-6.5.1-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
 Collecting watchdog>=2.1.5 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
   Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 4.1 MB/s eta 0:00:00[2025-06-24 16:44:42.697841] 
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 4.6 MB/s eta 0:00:00[2025-06-24 16:49:45.589557] 
 Collecting audioread>=2.1.9 (from librosa==0.9.2->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
   Downloading audioread-3.0.1-py3-none-any.whl.metadata (8.4 kB)
 Collecting scipy>=1.2.0 (from librosa==0.9.2->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
   Downloading scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 111.0 MB/s eta 0:00:00[2025-06-24 16:44:43.028455] 
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 31.4 MB/s eta 0:00:00[2025-06-24 16:49:45.863251] 
 Collecting joblib>=0.14 (from librosa==0.9.2->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
   Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
 Collecting decorator>=4.0.10 (from librosa==0.9.2->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
@@ -1151,6 +1101,8 @@ Collecting google-pasta>=0.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_c
   Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
 Collecting grpcio<2.0,>=1.24.3 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
   Downloading grpcio-1.73.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting h5py>=2.9.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading h5py-3.14.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
 Collecting keras<2.11,>=2.10.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
   Downloading keras-2.10.0-py2.py3-none-any.whl.metadata (1.3 kB)
 Collecting keras-preprocessing>=1.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
@@ -1188,13 +1140,13 @@ Collecting typing-extensions<5.0,>=4.0.0 (from rich>=10.14.0)
 Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
 Downloading rich-14.0.0-py3-none-any.whl (243 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 5.5 MB/s eta 0:00:00[2025-06-24 16:44:47.329258] 
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 15.5 MB/s eta 0:00:00[2025-06-24 16:49:50.760747] 
 Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 6.9 MB/s eta 0:00:00[2025-06-24 16:44:47.355461] 
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 108.8 MB/s eta 0:00:00
 Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 7.1 MB/s eta 0:00:00[2025-06-24 16:44:47.541895] 
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 92.9 MB/s eta 0:00:00
 Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 21.1 MB/s eta 0:00:00[2025-06-24 16:44:47.556319] 
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 108.2 MB/s eta 0:00:00[2025-06-24 16:49:50.816445] 
 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 Installing collected packages: typing-extensions, pygments, mdurl, markdown-it-py, rich
   Attempting uninstall: typing-extensions
@@ -1224,5 +1176,5 @@ Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.
 
 ────────────────────────────────────────────────────────────────────────────────────────
 
-[16:44:50] ❗️ installer returned a non-zero exit code
-[16:44:50] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[16:49:54] ❗️ installer returned a non-zero exit code
+[16:49:54] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.

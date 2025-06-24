@@ -1,20 +1,26 @@
 import streamlit as st
 import numpy as np
-import librosa
 import pickle
 import os
 import sys
 
+# Audio processing imports with fallbacks
+try:
+    import librosa
+    LIBROSA_AVAILABLE = True
+except ImportError:
+    st.error("Librosa not available")
+    LIBROSA_AVAILABLE = False
+
 # TensorFlow configuration and imports
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow warnings
+os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
 try:
     import tensorflow as tf
     from tensorflow.keras.models import load_model
     import tensorflow.keras.backend as K
-    # Set memory growth to avoid GPU memory issues
-    physical_devices = tf.config.list_physical_devices('GPU')
-    if len(physical_devices) > 0:
-        tf.config.experimental.set_memory_growth(physical_devices[0], True)
+    # Disable GPU if available to avoid memory issues
+    tf.config.set_visible_devices([], 'GPU')
 except ImportError as e:
     st.error(f"TensorFlow import error: {e}")
     st.stop()
@@ -173,6 +179,10 @@ def load_emotion_model():
 
 def extract_features(audio_data, sample_rate):
     try:
+        if not LIBROSA_AVAILABLE:
+            st.error("Audio processing library not available")
+            return None
+            
         if sample_rate != 22050:
             audio_data = librosa.resample(audio_data, orig_sr=sample_rate, target_sr=22050)
             sample_rate = 22050
