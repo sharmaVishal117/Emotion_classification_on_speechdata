@@ -1178,3 +1178,435 @@ Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.
 
 [16:49:54] ❗️ installer returned a non-zero exit code
 [16:49:54] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.
+[16:55:05] 🐙 Pulling code changes from Github...
+[16:55:05] 📦 Processing dependencies...
+[16:55:05] 📦 Apt dependencies were installed from /mount/src/emotion_classification_on_speechdata/packages.txt using apt-get.
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Hit:2 http://deb.debian.org/debian-security bullseye-security InRelease
+Hit:3 http://deb.debian.org/debian bullseye-updates InRelease
+Hit:4 https://packages.microsoft.com/debian/11/prod bullseye InRelease
+Reading package lists...[2025-06-24 16:55:07.143910] 
+Reading package lists...[2025-06-24 16:55:08.088738] 
+Building dependency tree...[2025-06-24 16:55:08.312992] 
+Reading state information...[2025-06-24 16:55:08.313867] 
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.9.23 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.28.0 depends on protobuf>=3.20,<5 and
+      tensorflow==2.10.1 depends on protobuf>=3.9.2,<3.20, we can conclude
+      that streamlit==1.28.0 and tensorflow==2.10.1 are incompatible.
+      And because you require streamlit==1.28.0 and tensorflow==2.10.1, we can
+      conclude that your requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.9.23 environment at /home/adminuser/venv
+Audited 1 package in 1ms
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.28.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading streamlit-1.28.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting numpy==1.21.6 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 2))
+  Downloading numpy-1.21.6-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.1 kB)
+Collecting librosa==0.8.1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading librosa-0.8.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting tensorflow==2.10.1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading tensorflow-2.10.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+Collecting scikit-learn==1.1.3 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 5))
+  Downloading scikit_learn-1.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting matplotlib==3.6.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 6))
+  Downloading matplotlib-3.6.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting seaborn==0.11.2 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 7))
+  Downloading seaborn-0.11.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting pandas==1.5.3 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 8))
+  Downloading pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting SoundFile==0.10.3.post1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 9))
+  Downloading SoundFile-0.10.3.post1-py2.py3-none-any.whl.metadata (11 kB)
+Collecting audioread==3.0.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 10))
+  Downloading audioread-3.0.0.tar.gz (377 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.0/377.0 kB 16.2 MB/s eta 0:00:00[2025-06-24 16:55:13.659883] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting altair<6,>=4.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading altair-5.5.0-py3-none-any.whl.metadata (11 kB)
+Collecting blinker<2,>=1.0.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<6,>=4.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting click<9,>=7.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting importlib-metadata<7,>=1.4 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading importlib_metadata-6.11.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting packaging<24,>=16.8 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow<11,>=7.1.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pillow-10.4.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting protobuf<5,>=3.20 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading protobuf-4.25.8-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting pyarrow>=6.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pyarrow-20.0.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting python-dateutil<3,>=2.7.3 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting requests<3,>=2.27 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+Collecting rich<14,>=10.14.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting tenacity<9,>=8.1.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-extensions<5,>=4.3.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting tzlocal<6,>=1.1 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting validators<1,>=0.2 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading validators-0.35.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading GitPython-3.1.44-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tornado-6.5.1-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting watchdog>=2.1.5 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 110.1 MB/s eta 0:00:00[2025-06-24 16:55:19.297688] 
+Collecting scipy>=1.0.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 132.3 MB/s eta 0:00:00[2025-06-24 16:55:19.607220] 
+Collecting joblib>=0.14 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting decorator>=3.0.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting resampy>=0.2.2 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading resampy-0.4.3-py3-none-any.whl.metadata (3.0 kB)
+Collecting numba>=0.43.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting pooch>=1.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+Collecting absl-py>=1.0.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading absl_py-2.3.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting astunparse>=1.6.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=2.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting gast<=0.4.0,>=0.2.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading gast-0.4.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading grpcio-1.73.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting h5py>=2.9.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading h5py-3.14.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+Collecting keras<2.11,>=2.10.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading keras-2.10.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting keras-preprocessing>=1.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl.metadata (1.9 kB)
+Collecting libclang>=13.0.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+INFO: pip is looking at multiple versions of tensorflow to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1) and -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4) because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    streamlit 1.28.0 depends on protobuf<5 and >=3.20
+    tensorflow 2.10.1 depends on protobuf<3.20 and >=3.9.2
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting typing-extensions<5.0,>=4.0.0 (from rich>=10.14.0)
+  Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 16.7 MB/s eta 0:00:00[2025-06-24 16:55:24.505547] 
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 100.7 MB/s eta 0:00:00[2025-06-24 16:55:24.520681] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 89.2 MB/s eta 0:00:00[2025-06-24 16:55:24.548603] 
+Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 94.2 MB/s eta 0:00:00[2025-06-24 16:55:24.563633] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: typing-extensions, pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.14.0
+    Uninstalling typing_extensions-4.14.0:
+      Successfully uninstalled typing_extensions-4.14.0
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 3.0.0
+    Uninstalling markdown-it-py-3.0.0:
+      Successfully uninstalled markdown-it-py-3.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.0.0
+    Uninstalling rich-14.0.0:
+      Successfully uninstalled rich-14.0.0
+Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.0.0 typing-extensions-4.14.0
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[16:55:27] ❗️ installer returned a non-zero exit code
+[16:55:42] 🖥 Provisioning machine...
+[16:55:47] 🎛 Preparing system...
+[16:55:46] 🚀 Starting up repository: 'emotion_classification_on_speechdata', branch: 'main', main module: 'app.py'
+[16:55:46] 🐙 Cloning repository...
+[16:55:47] 🐙 Cloning into '/mount/src/emotion_classification_on_speechdata'...
+
+[16:55:47] 🐙 Cloned repository!
+[16:55:47] 🐙 Pulling code changes from Github...
+[16:55:47] 📦 Processing dependencies...
+[16:55:47] 📦 Apt dependencies were installed from /mount/src/emotion_classification_on_speechdata/packages.txt using apt-get.
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [27.2 kB]
+Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.0 kB]
+Get:4 https://packages.microsoft.com/debian/11/prod bullseye InRelease [3650 B]
+Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [381 kB]
+Get:6 https://packages.microsoft.com/debian/11/prod bullseye/main amd64 Packages [198 kB]
+Get:7 https://packages.microsoft.com/debian/11/prod bullseye/main arm64 Packages [48.2 kB]
+Fetched 702 kB in 1s (998 kB/s)
+Reading package lists...[2025-06-24 16:55:49.359044] 
+[16:55:49] ⛓ Spinning up manager process...
+Reading package lists...[2025-06-24 16:55:50.020294] 
+Building dependency tree...[2025-06-24 16:55:50.231797] 
+Reading state information...[2025-06-24 16:55:50.232485] 
+0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.9.23 environment at /home/adminuser/venv
+  × No solution found when resolving dependencies:
+  ╰─▶ Because streamlit==1.28.0 depends on protobuf>=3.20,<5 and
+      tensorflow==2.10.1 depends on protobuf>=3.9.2,<3.20, we can conclude
+      that streamlit==1.28.0 and tensorflow==2.10.1 are incompatible.
+      And because you require streamlit==1.28.0 and tensorflow==2.10.1, we can
+      conclude that your requirements are unsatisfiable.
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.9.23 environment at /home/adminuser/venv
+Resolved 5 packages in 101ms
+Prepared 5 packages in 109ms
+Installed 5 packages in 13ms
+ + markdown-it-py==3.0.0
+ + mdurl==0.1.2
+ +[2025-06-24 16:55:53.049756]  pygments==2.19.2
+ + rich==14.0.0
+ + typing-extensions==4.14.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit==1.28.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading streamlit-1.28.0-py2.py3-none-any.whl.metadata (8.1 kB)
+Collecting numpy==1.21.6 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 2))
+  Downloading numpy-1.21.6-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (2.1 kB)
+Collecting librosa==0.8.1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading librosa-0.8.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting tensorflow==2.10.1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading tensorflow-2.10.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.1 kB)
+Collecting scikit-learn==1.1.3 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 5))
+  Downloading scikit_learn-1.1.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting matplotlib==3.6.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 6))
+  Downloading matplotlib-3.6.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting seaborn==0.11.2 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 7))
+  Downloading seaborn-0.11.2-py3-none-any.whl.metadata (2.3 kB)
+Collecting pandas==1.5.3 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 8))
+  Downloading pandas-1.5.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting SoundFile==0.10.3.post1 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 9))
+  Downloading SoundFile-0.10.3.post1-py2.py3-none-any.whl.metadata (11 kB)
+Collecting audioread==3.0.0 (from -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 10))
+  Downloading audioread-3.0.0.tar.gz (377 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 377.0/377.0 kB 18.6 MB/s eta 0:00:00[2025-06-24 16:55:56.473146] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting altair<6,>=4.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading altair-5.5.0-py3-none-any.whl.metadata (11 kB)
+Collecting blinker<2,>=1.0.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<6,>=4.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting click<9,>=7.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading click-8.1.8-py3-none-any.whl.metadata (2.3 kB)
+Collecting importlib-metadata<7,>=1.4 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading importlib_metadata-6.11.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting packaging<24,>=16.8 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow<11,>=7.1.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pillow-10.4.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Collecting protobuf<5,>=3.20 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading protobuf-4.25.8-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting pyarrow>=6.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pyarrow-20.0.0-cp39-cp39-manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting python-dateutil<3,>=2.7.3 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting requests<3,>=2.27 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading requests-2.32.4-py3-none-any.whl.metadata (4.9 kB)
+Collecting rich<14,>=10.14.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading rich-13.9.4-py3-none-any.whl.metadata (18 kB)
+Collecting tenacity<9,>=8.1.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-extensions<5,>=4.3.0 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting tzlocal<6,>=1.1 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting validators<1,>=0.2 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading validators-0.35.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading GitPython-3.1.44-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado<7,>=6.0.3 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading tornado-6.5.1-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting watchdog>=2.1.5 (from streamlit==1.28.0->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1))
+  Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 96.5 MB/s eta 0:00:00[2025-06-24 16:56:02.550393] 
+Collecting scipy>=1.0.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading scipy-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 173.6 MB/s eta 0:00:00[2025-06-24 16:56:02.912768] 
+Collecting joblib>=0.14 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting decorator>=3.0.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting resampy>=0.2.2 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading resampy-0.4.3-py3-none-any.whl.metadata (3.0 kB)
+Collecting numba>=0.43.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading numba-0.60.0-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting pooch>=1.0 (from librosa==0.8.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 3))
+  Downloading pooch-1.8.2-py3-none-any.whl.metadata (10 kB)
+Collecting absl-py>=1.0.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading absl_py-2.3.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting astunparse>=1.6.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading astunparse-1.6.3-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting flatbuffers>=2.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading flatbuffers-25.2.10-py2.py3-none-any.whl.metadata (875 bytes)
+Collecting gast<=0.4.0,>=0.2.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading gast-0.4.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting google-pasta>=0.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading google_pasta-0.2.0-py3-none-any.whl.metadata (814 bytes)
+Collecting grpcio<2.0,>=1.24.3 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading grpcio-1.73.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting h5py>=2.9.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading h5py-3.14.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.7 kB)
+Collecting keras<2.11,>=2.10.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading keras-2.10.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting keras-preprocessing>=1.1.1 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading Keras_Preprocessing-1.1.2-py2.py3-none-any.whl.metadata (1.9 kB)
+Collecting libclang>=13.0.0 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading libclang-18.1.1-py2.py3-none-manylinux2010_x86_64.whl.metadata (5.2 kB)
+Collecting opt-einsum>=2.3.2 (from tensorflow==2.10.1->-r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4))
+  Downloading opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+INFO: pip is looking at multiple versions of tensorflow to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 1) and -r /mount/src/emotion_classification_on_speechdata/requirements.txt (line 4) because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    streamlit 1.28.0 depends on protobuf<5 and >=3.20
+    tensorflow 2.10.1 depends on protobuf<3.20 and >=3.9.2
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting typing-extensions<5.0,>=4.0.0 (from rich>=10.14.0)
+  Downloading typing_extensions-4.14.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.0.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.2/243.2 kB 12.7 MB/s eta 0:00:00[2025-06-24 16:56:07.353814] 
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 109.7 MB/s eta 0:00:00[2025-06-24 16:56:07.369167] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 84.0 MB/s eta 0:00:00[2025-06-24 16:56:07.399110] 
+Downloading typing_extensions-4.14.0-py3-none-any.whl (43 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.8/43.8 kB 106.5 MB/s eta 0:00:00[2025-06-24 16:56:07.413957] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: typing-extensions, pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing_extensions 4.14.0
+    Uninstalling typing_extensions-4.14.0:
+      Successfully uninstalled typing_extensions-4.14.0
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 3.0.0
+    Uninstalling markdown-it-py-3.0.0:
+      Successfully uninstalled markdown-it-py-3.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.0.0
+    Uninstalling rich-14.0.0:
+      Successfully uninstalled rich-14.0.0
+Successfully installed markdown-it-py-3.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.0.0 typing-extensions-4.14.0
+
+[notice] A new release of pip is available: 24.0 -> 25.1.1
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[16:56:10] ❗️ installer returned a non-zero exit code
+[16:56:10] ❗️ Error during processing dependencies! Please fix the error and push an update, or try restarting the app.

@@ -7,10 +7,12 @@ import sys
 # Audio processing imports with fallbacks
 try:
     import librosa
-    LIBROSA_AVAILABLE = True
-except ImportError:
-    st.error("Librosa not available")
-    LIBROSA_AVAILABLE = False
+    import soundfile as sf
+    AUDIO_PROCESSING_AVAILABLE = True
+except ImportError as e:
+    st.error(f"Audio processing libraries not available: {e}")
+    st.error("Please install librosa and soundfile for audio processing.")
+    AUDIO_PROCESSING_AVAILABLE = False
 
 # TensorFlow configuration and imports
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow warnings
@@ -179,7 +181,7 @@ def load_emotion_model():
 
 def extract_features(audio_data, sample_rate):
     try:
-        if not LIBROSA_AVAILABLE:
+        if not AUDIO_PROCESSING_AVAILABLE:
             st.error("Audio processing library not available")
             return None
             
@@ -247,8 +249,12 @@ def plot_mfcc_features(features):
     return fig
 
 def main():
-    st.markdown('<h1 class="main-header">Audio Emotion Recognition</h1>', 
+    st.markdown('<h1 class="main-header">Audio Emotion Recognition (Demo)</h1>', 
                 unsafe_allow_html=True)
+    
+    # Show a warning about demo mode if audio processing is not available
+    if not AUDIO_PROCESSING_AVAILABLE:
+        st.warning("⚠️ **Demo Mode**: Audio processing libraries not available. Upload an audio file to see a sample prediction.")
     
     st.markdown("""
     <div style="text-align: center; margin-bottom: 2rem;">
@@ -256,7 +262,7 @@ def main():
         Upload an audio file and let AI detect the emotional content!
         </p>
     </div>
-    """, unsafe_allow_html=True)    
+    """, unsafe_allow_html=True)
     
     with st.sidebar:
         st.header("Model Information")
@@ -297,6 +303,37 @@ def main():
     )
     
     if uploaded_file is not None:
+        if not AUDIO_PROCESSING_AVAILABLE:
+            st.error("🚫 Audio processing is not available in this deployment.")
+            st.info("📝 This demo is running without audio libraries (librosa, soundfile) to avoid system dependency issues.")
+            st.info("💡 For full functionality, please run this app locally with all dependencies installed.")
+            
+            # Show a demo prediction instead
+            st.markdown('<h2 class="sub-header">Demo Mode</h2>', unsafe_allow_html=True)
+            st.warning("⚠️ Running in demo mode - showing sample prediction")
+            
+            # Create a fake demo prediction
+            demo_emotions = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust']
+            demo_confidences = [0.15, 0.08, 0.45, 0.12, 0.10, 0.05, 0.05]  # Happy is highest
+            
+            st.markdown(f"""
+            <div class="emotion-result" style="background-color: #f1c40f; color: white;">
+                Demo Prediction: HAPPY (45.0% confidence)
+            </div>
+            """, unsafe_allow_html=True)
+            
+            conf_df = pd.DataFrame({
+                'Emotion': demo_emotions,
+                'Confidence (%)': [c * 100 for c in demo_confidences]
+            }).sort_values('Confidence (%)', ascending=False)
+            
+            st.dataframe(
+                conf_df.style.format({'Confidence (%)': '{:.2f}'}),
+                use_container_width=True
+            )
+            
+            return
+        
         st.markdown('<h2 class="sub-header">File Information</h2>', 
                     unsafe_allow_html=True)
         
