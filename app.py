@@ -9,6 +9,7 @@ try:
     import librosa
     import soundfile as sf
     AUDIO_PROCESSING_AVAILABLE = True
+    st.success("✅ Audio processing libraries loaded successfully!")
 except ImportError as e:
     st.error(f"Audio processing libraries not available: {e}")
     st.error("Please install librosa and soundfile for audio processing.")
@@ -32,6 +33,7 @@ try:
         pass  # GPU config might not be available
     
     TENSORFLOW_AVAILABLE = True
+    st.success("✅ TensorFlow loaded successfully!")
 except ImportError as e:
     st.error(f"⚠️ TensorFlow not available: {e}")
     st.info("Running in basic mode without ML capabilities")
@@ -263,12 +265,22 @@ def plot_mfcc_features(features):
     return fig
 
 def main():
-    st.markdown('<h1 class="main-header">Audio Emotion Recognition (Demo)</h1>', 
+    st.markdown('<h1 class="main-header">Audio Emotion Recognition</h1>', 
                 unsafe_allow_html=True)
     
-    # Show a warning about demo mode if audio processing is not available
-    if not AUDIO_PROCESSING_AVAILABLE:
-        st.warning("⚠️ **Demo Mode**: Audio processing libraries not available. Upload an audio file to see a sample prediction.")
+    # Show status of audio processing and ML capabilities
+    col1, col2 = st.columns(2)
+    with col1:
+        if AUDIO_PROCESSING_AVAILABLE:
+            st.success("🎵 Audio Processing: Ready")
+        else:
+            st.warning("🎵 Audio Processing: Demo Mode")
+    
+    with col2:
+        if TENSORFLOW_AVAILABLE:
+            st.success("🧠 ML Model: Ready")
+        else:
+            st.warning("🧠 ML Model: Demo Mode")
     
     st.markdown("""
     <div style="text-align: center; margin-bottom: 2rem;">
@@ -318,14 +330,15 @@ def main():
     )
     
     if uploaded_file is not None:
-        if not AUDIO_PROCESSING_AVAILABLE:
-            st.error("🚫 Audio processing is not available in this deployment.")
-            st.info("📝 This demo is running without audio libraries (librosa, soundfile) to avoid system dependency issues.")
-            st.info("💡 For full functionality, please run this app locally with all dependencies installed.")
-            
-            # Show a demo prediction instead
+        if not AUDIO_PROCESSING_AVAILABLE or not TENSORFLOW_AVAILABLE:
+            # Demo mode
             st.markdown('<h2 class="sub-header">Demo Mode</h2>', unsafe_allow_html=True)
             st.warning("⚠️ Running in demo mode - showing sample prediction")
+            
+            if not AUDIO_PROCESSING_AVAILABLE:
+                st.info("📝 Audio processing libraries not fully available")
+            if not TENSORFLOW_AVAILABLE:
+                st.info("🧠 TensorFlow model not fully available")
             
             # Create a fake demo prediction
             demo_emotions = ['neutral', 'calm', 'happy', 'sad', 'angry', 'fearful', 'disgust']
@@ -349,6 +362,7 @@ def main():
             
             return
         
+        # Full functionality mode
         st.markdown('<h2 class="sub-header">File Information</h2>', 
                     unsafe_allow_html=True)
         
