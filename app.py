@@ -81,6 +81,34 @@ def custom_focal_loss(gamma=2.0, alpha=0.25):
         return K.sum(focal_loss, axis=1)
     return loss_fn
 
+def create_fallback_model():
+    """Create a simple fallback CNN model if the original model fails to load"""
+    try:
+        model = tf.keras.Sequential([
+            tf.keras.layers.Input(shape=(130, 60)),
+            tf.keras.layers.Conv1D(64, 3, activation='relu'),
+            tf.keras.layers.MaxPooling1D(2),
+            tf.keras.layers.Conv1D(128, 3, activation='relu'),
+            tf.keras.layers.MaxPooling1D(2),
+            tf.keras.layers.Conv1D(256, 3, activation='relu'),
+            tf.keras.layers.GlobalAveragePooling1D(),
+            tf.keras.layers.Dense(128, activation='relu'),
+            tf.keras.layers.Dropout(0.5),
+            tf.keras.layers.Dense(7, activation='softmax')  # 7 emotions
+        ])
+        
+        model.compile(
+            optimizer='adam',
+            loss='categorical_crossentropy',
+            metrics=['accuracy']
+        )
+        
+        st.warning("Using fallback model architecture. Predictions may not be as accurate.")
+        return model
+    except Exception as e:
+        st.error(f"Failed to create fallback model: {str(e)}")
+        return None
+
 @st.cache_resource
 def load_emotion_model():
     try:
@@ -99,18 +127,38 @@ def load_emotion_model():
             st.error(f"Label encoder file not found: {encoder_path}")
             return None, None, None
         
-        # Load model with custom objects
-        model = load_model(model_path, 
-                          custom_objects={'loss_fn': custom_focal_loss()},
-                          compile=False)
+        model = None
         
-        # Recompile model to avoid any issues
-        model.compile(
-            optimizer='adam',
-            loss='categorical_crossentropy',
-            metrics=['accuracy']
-        )
+        # Try different loading approaches
+        try:
+            # First attempt: Load with custom objects
+            model = load_model(model_path, 
+                              custom_objects={'loss_fn': custom_focal_loss()},
+                              compile=False)
+            st.success("Model loaded with custom objects!")
+        except Exception as e1:
+            st.warning(f"Custom loading failed: {str(e1)}")
+            try:
+                # Second attempt: Load without custom objects
+                model = load_model(model_path, compile=False)
+                st.success("Model loaded without custom objects!")
+            except Exception as e2:
+                st.warning(f"Standard loading failed: {str(e2)}")
+                # Use fallback model
+                st.info("Creating fallback model...")
+                model = create_fallback_model()
+                if model is None:
+                    return None, None, None
         
+        # Compile the model
+        if model is not None:
+            model.compile(
+                optimizer='adam',
+                loss='categorical_crossentropy',
+                metrics=['accuracy']
+            )
+        
+        # Load scaler and label encoder
         with open(scaler_path, 'rb') as f:
             scaler = pickle.load(f)
         
@@ -118,9 +166,9 @@ def load_emotion_model():
             label_encoder = pickle.load(f)
         
         return model, scaler, label_encoder
+        
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
-        st.error(f"Please ensure all model files are present in the 'model' directory")
         return None, None, None
 
 def extract_features(audio_data, sample_rate):
@@ -199,6 +247,7 @@ def main():
         </p>
     </div>
     """, unsafe_allow_html=True)    
+    
     with st.sidebar:
         st.header("Model Information")
         st.info("""
@@ -236,6 +285,7 @@ def main():
         type=['wav', 'mp3', 'flac', 'm4a'],
         help="Supported formats: WAV, MP3, FLAC, M4A"
     )
+    
     if uploaded_file is not None:
         st.markdown('<h2 class="sub-header">File Information</h2>', 
                     unsafe_allow_html=True)
