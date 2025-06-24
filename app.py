@@ -15,17 +15,27 @@ except ImportError as e:
     AUDIO_PROCESSING_AVAILABLE = False
 
 # TensorFlow configuration and imports
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow warnings
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress TensorFlow warnings
 os.environ['TF_FORCE_GPU_ALLOW_GROWTH'] = 'true'
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'  # Disable GPU
+
 try:
     import tensorflow as tf
+    tf.get_logger().setLevel('ERROR')  # Suppress TensorFlow logs
     from tensorflow.keras.models import load_model
     import tensorflow.keras.backend as K
-    # Disable GPU if available to avoid memory issues
-    tf.config.set_visible_devices([], 'GPU')
+    
+    # Disable GPU completely for cloud deployment
+    try:
+        tf.config.set_visible_devices([], 'GPU')
+    except:
+        pass  # GPU config might not be available
+    
+    TENSORFLOW_AVAILABLE = True
 except ImportError as e:
-    st.error(f"TensorFlow import error: {e}")
-    st.stop()
+    st.error(f"⚠️ TensorFlow not available: {e}")
+    st.info("Running in basic mode without ML capabilities")
+    TENSORFLOW_AVAILABLE = False
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -120,6 +130,10 @@ def create_fallback_model():
 @st.cache_resource
 def load_emotion_model():
     try:
+        if not TENSORFLOW_AVAILABLE:
+            st.warning("⚠️ TensorFlow not available - running in demo mode")
+            return None, None, None
+            
         # Check if model files exist
         model_path = 'model/emotion_model (2).h5'
         scaler_path = 'model/scaler (2).pkl'
@@ -283,15 +297,16 @@ def main():
         - **Features**: MFCC (60 coefficients)
         - **Audio Duration**: 3 seconds
         - **Sample Rate**: 22,050 Hz
-        """)
-    
+        """)    
     model, scaler, label_encoder = load_emotion_model()
     
-    if model is None:
+    if model is None and TENSORFLOW_AVAILABLE:
         st.error("Failed to load the emotion recognition model. Please check if model files exist in the 'model' directory.")
         st.stop()
-    
-    st.success("Model loaded successfully!")
+    elif model is not None:
+        st.success("Model loaded successfully!")
+    else:
+        st.info("Running in demo mode - model simulation enabled")
     
     st.markdown('<h2 class="sub-header">Upload Audio File</h2>', 
                 unsafe_allow_html=True)
