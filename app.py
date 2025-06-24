@@ -9,10 +9,7 @@ try:
     import librosa
     import soundfile as sf
     AUDIO_PROCESSING_AVAILABLE = True
-    st.success("✅ Audio processing libraries loaded successfully!")
 except ImportError as e:
-    st.info("🎵 Audio processing libraries not available - running in demo mode")
-    st.info("💡 This deployment uses TensorFlow-only mode to ensure compatibility")
     AUDIO_PROCESSING_AVAILABLE = False
 
 # TensorFlow configuration and imports
@@ -33,10 +30,7 @@ try:
         pass  # GPU config might not be available
     
     TENSORFLOW_AVAILABLE = True
-    st.success("✅ TensorFlow loaded successfully!")
 except ImportError as e:
-    st.error(f"⚠️ TensorFlow not available: {e}")
-    st.info("Running in basic mode without ML capabilities")
     TENSORFLOW_AVAILABLE = False
 
 import matplotlib.pyplot as plt
@@ -281,6 +275,18 @@ def main():
             st.success("🧠 ML Model: Ready")
         else:
             st.warning("🧠 ML Model: Loading...")
+    
+    # Show detailed status messages
+    if AUDIO_PROCESSING_AVAILABLE:
+        st.success("✅ Audio processing libraries loaded successfully!")
+    else:
+        st.info("🎵 Audio processing libraries not available - running in demo mode")
+        st.info("💡 This deployment uses TensorFlow-only mode to ensure compatibility")
+    
+    if TENSORFLOW_AVAILABLE:
+        st.success("✅ TensorFlow loaded successfully!")
+    else:
+        st.warning("⚠️ TensorFlow not available - running in basic mode")
     
     # Show deployment info
     if not AUDIO_PROCESSING_AVAILABLE:
