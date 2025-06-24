@@ -2,9 +2,23 @@ import streamlit as st
 import numpy as np
 import librosa
 import pickle
-import tensorflow as tf
-from tensorflow.keras.models import load_model
-import tensorflow.keras.backend as K
+import os
+import sys
+
+# TensorFlow configuration and imports
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow warnings
+try:
+    import tensorflow as tf
+    from tensorflow.keras.models import load_model
+    import tensorflow.keras.backend as K
+    # Set memory growth to avoid GPU memory issues
+    physical_devices = tf.config.list_physical_devices('GPU')
+    if len(physical_devices) > 0:
+        tf.config.experimental.set_memory_growth(physical_devices[0], True)
+except ImportError as e:
+    st.error(f"TensorFlow import error: {e}")
+    st.stop()
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
@@ -70,18 +84,43 @@ def custom_focal_loss(gamma=2.0, alpha=0.25):
 @st.cache_resource
 def load_emotion_model():
     try:
-        model = load_model('model/emotion_model (2).h5', 
-                          custom_objects={'loss_fn': custom_focal_loss()})
+        # Check if model files exist
+        model_path = 'model/emotion_model (2).h5'
+        scaler_path = 'model/scaler (2).pkl'
+        encoder_path = 'model/label_encoder (3).pkl'
         
-        with open('model/scaler (2).pkl', 'rb') as f:
+        if not os.path.exists(model_path):
+            st.error(f"Model file not found: {model_path}")
+            return None, None, None
+        if not os.path.exists(scaler_path):
+            st.error(f"Scaler file not found: {scaler_path}")
+            return None, None, None
+        if not os.path.exists(encoder_path):
+            st.error(f"Label encoder file not found: {encoder_path}")
+            return None, None, None
+        
+        # Load model with custom objects
+        model = load_model(model_path, 
+                          custom_objects={'loss_fn': custom_focal_loss()},
+                          compile=False)
+        
+        # Recompile model to avoid any issues
+        model.compile(
+            optimizer='adam',
+            loss='categorical_crossentropy',
+            metrics=['accuracy']
+        )
+        
+        with open(scaler_path, 'rb') as f:
             scaler = pickle.load(f)
         
-        with open('model/label_encoder (3).pkl', 'rb') as f:
+        with open(encoder_path, 'rb') as f:
             label_encoder = pickle.load(f)
         
         return model, scaler, label_encoder
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
+        st.error(f"Please ensure all model files are present in the 'model' directory")
         return None, None, None
 
 def extract_features(audio_data, sample_rate):
