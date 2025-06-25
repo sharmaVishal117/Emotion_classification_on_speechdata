@@ -1,6 +1,6 @@
 # MARS Open Projects 2025 - Project 1: Speech Emotion Recognition System
-
-An intelligent Streamlit web application that analyzes audio files to detect emotional content using deep learning. The system can identify seven different emotions: Neutral, Calm, Happy, Sad, Angry, Fearful, and Disgust
+🎯 Project Overview
+This project implements a sophisticated Speech Emotion Recognition (SER) system using deep learning techniques as part of the MARS Open Projects 2025 initiative. The system employs a hybrid CNN + SE blocks architecture trained on the RAVDESS dataset to classify emotions in speech and song audio files with high accuracy.
 
 ## 🌐 Live Demo
 
