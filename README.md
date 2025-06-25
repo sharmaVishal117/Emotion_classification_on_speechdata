@@ -24,6 +24,12 @@ The system recognizes 7 distinct emotional states:
 | Fearful  | 06   | Scared, anxious state       | 😨   |
 | Disgust  | 07   | Repulsed, disgusted state   | 🤢   |
 
+✅ Overall Performance (After Removing Surprised)
+--Weighted Average F1 Score: 92.00% 
+--Macro Average F1 Score: 93.11% 
+--Overall Accuracy: 92.20% 
+--Test Precision: 94.00% 
+
 
 🏗 **System Architecture**
 
@@ -123,42 +129,6 @@ Spectral masking
 | Weighted Avg F1 | 86.00% |
 
 
-## �🚀 Features
-
-- **Real-time Emotion Detection**: Upload audio files and get instant emotion predictions
-- **Multiple Audio Formats**: Supports WAV, MP3, FLAC, and M4A files (local version)
-- **Visual Analysis**: Interactive MFCC feature visualization and confidence scoring
-- **User-friendly Interface**: Clean, modern UI with detailed explanations
-- **High Accuracy**: Deep CNN model with SE-Blocks for robust emotion recognition
-- **Demo Mode**: Cloud deployment shows sample predictions without audio processing
-
-## 🎯 Supported Emotions
-
-- Neutral
-- Calm  
-- Happy
-- Sad
-- Angry
-- Fearful
-- Disgust
-
-## 🛠️ Technology Stack
-
-- **Frontend**: Streamlit
-- **ML Framework**: TensorFlow/Keras
-- **Audio Processing**: Librosa (local version)
-- **Feature Extraction**: MFCC (Mel-Frequency Cepstral Coefficients)
-- **Visualization**: Matplotlib, Seaborn
-
-## 📊 Model Architecture
-
-- Deep Convolutional Neural Network with SE-Blocks
-- 60 MFCC coefficients as input features
-- Processes 3-second audio segments at 22,050 Hz sample rate
-- Custom focal loss for handling class imbalance
-
-## 🚀 Quick Start
-
 ### Local Installation
 
 1. Clone the repository:
@@ -166,17 +136,14 @@ Spectral masking
 git clone <your-repo-url>
 cd emotion_classification_on_speechdata
 ```
-
 2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
 3. Run the app:
 ```bash
 streamlit run app.py
 ```
-
 ### Streamlit Cloud Deployment
 
 This app is ready for deployment on Streamlit Cloud. Simply:
@@ -200,7 +167,6 @@ emotion_classification_on_speechdata/
 └── .streamlit/
     └── config.toml       # Streamlit configuration
 ```
-
 ## 🎵 Usage
 
 1. **Upload Audio**: Choose an audio file in supported formats
@@ -225,4 +191,4 @@ Feel free to submit issues and enhancement requests!
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+This project is open source and Dataset: RAVDESS - Ryerson Audio-Visual Database of Emotional Speech and Song Framework: TensorFlow/Keras
