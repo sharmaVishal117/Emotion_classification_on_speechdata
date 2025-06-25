@@ -152,7 +152,7 @@ This app is ready for deployment on Streamlit Cloud. Simply:
 2. Connect your GitHub repository to Streamlit Cloud
 3. Deploy with one click!
 
-**Dependencies   
+**Dependencies**   
 | Package      | Version |
 | ------------ | ------- |
 | streamlit    | 1.34.0  |
