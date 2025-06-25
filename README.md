@@ -153,14 +153,17 @@ This app is ready for deployment on Streamlit Cloud. Simply:
 3. Deploy with one click!
 
 **Dependencies   
-streamlit==1.34.0
-numpy==1.24.3
-librosa==0.10.1
-tensorflow==2.12.0
-scikit-learn==1.2.2
-matplotlib==3.7.1
-seaborn==0.12.2
-pandas==1.5.3
+| Package      | Version |
+| ------------ | ------- |
+| streamlit    | 1.34.0  |
+| numpy        | 1.24.3  |
+| librosa      | 0.10.1  |
+| tensorflow   | 2.12.0  |
+| scikit-learn | 1.2.2   |
+| matplotlib   | 3.7.1   |
+| seaborn      | 0.12.2  |
+| pandas       | 1.5.3   |
+
 
 
 ## 📁 Project Structure
