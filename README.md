@@ -2,11 +2,58 @@
 🎯 Project Overview
 This project implements a sophisticated Speech Emotion Recognition (SER) system using deep learning techniques as part of the MARS Open Projects 2025 initiative. The system employs a hybrid CNN + SE blocks architecture trained on the RAVDESS dataset to classify emotions in speech and song audio files with high accuracy.
 
-## 🌐 Live Demo
+📋 Project Requirements
+-Primary Objective: Develop an AI system that can accurately identify emotions from speech audio
+-Performance Targets:
+-Weighted F1 Score > 80%
+-Overall Accuracy > 80%
+-Individual Class Recalls > 75%
+-Dataset: RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)
+-Implementation: Complete end-to-end pipeline with web interface
 
-� **[Try the app on Streamlit Cloud](https://emotionclassificationonspeechdata-hwgfvwrm32azfm6pqydvjm.streamlit.app/)**
+🎵 Emotion Classification Categories
+The system recognizes 8 distinct emotional states:
 
-*Note: The cloud version runs in demo mode due to audio library constraints. For full functionality, please run locally.*
+Emotion	   Code	          Description	Icon
+Neutral	    01	        Baseline emotional state	😐
+Calm	    02	        Peaceful, relaxed state	😌
+Happy	    03         	Joyful, positive state	😄
+Sad	        04	        Sorrowful, melancholic state	😢
+Angry	    05	        Aggressive, frustrated state	😠
+Fearful	    06	        Scared, anxious state	😨
+Disgust	    07	        Repulsed, disgusted state	🤢
+
+🏗 System Architecture
+
+🏗️ Layers:
+-Stacked Conv1D layers with:
+-BatchNormalization
+-MaxPooling1D
+-Dropout
+
+✅ SE Blocks (Squeeze-and-Excitation for channel attention)
+-GlobalAveragePooling1D for spatial feature aggregation
+-Dense layers with ReLU activation
+-Final Dense layer with Softmax for multi-class classification
+
+🎧 Feature Engineering
+-Audio Processing: 3-second segments at 22.05kHz sampling rate
+-Feature Extraction: 60 MFCCs × 130 time steps per audio
+-Data Augmentation:
+-Gaussian noise
+-Time shifting
+-Spectral masking
+-Normalization: StandardScaler applied to flattened MFCC features
+
+⚙️ Loss Function & Optimization
+-Loss: Categorical Focal Loss (gamma=2.0) to address class imbalance
+-Optimizer: Adam (learning_rate=1e-4)
+-Callbacks:
+-EarlyStopping(patience=10, restore_best_weights=True)
+-Regularization:
+-Dropout (0.3–0.4)
+-BatchNormalization
+-SE channel recalibration (via SE Blocks)
 
 ## �🚀 Features
 
