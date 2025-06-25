@@ -1,6 +1,6 @@
-# Audio Emotion Recognition App
+# MARS Open Projects 2025 - Project 1: Speech Emotion Recognition System
 
-An intelligent Streamlit web application that analyzes audio files to detect emotional content using deep learning. The system can identify seven different emotions: Neutral, Calm, Happy, Sad, Angry, Fearful, and Disgust.
+An intelligent Streamlit web application that analyzes audio files to detect emotional content using deep learning. The system can identify seven different emotions: Neutral, Calm, Happy, Sad, Angry, Fearful, and Disgust
 
 ## 🌐 Live Demo
 
